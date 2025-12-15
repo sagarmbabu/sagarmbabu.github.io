@@ -3,27 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sagar Tech Trends | Portfolio</title>
-  <meta name="description" content="Portfolio of Sagar M Babu – Data Analytics & AI Professional | Turning Data into Intelligent Insights." />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <title>Sagar Murugesh Babu | ML Systems & GPU Software Engineer</title>
+  <meta name="description" content="Portfolio of Sagar Murugesh Babu – Software Engineer focused on GPU-accelerated ML systems, CUDA, PyTorch, TensorRT, and inference optimization." />
+  <link rel="stylesheet" href="style.css?v=4" />
   <style>
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body>
+
   <!-- Header -->
   <header>
-  <!-- <img src="profile.jpg?v=3" alt="Sagar M Babu" class="profile-pic" /> -->
-
-
-    <h1>Sagar M Babu</h1>
-    <p class="tagline">Exploring the World of Data Analytics & AI | From Insights to Impact</p>
+    <h1>Sagar Murugesh Babu</h1>
+    <p class="tagline">Software Engineer | ML Systems & GPU Inference Optimization (CUDA • PyTorch • TensorRT • Nsight)</p>
     <nav>
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -32,54 +30,131 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      From analyzing large datasets to deploying AI-powered applications, my journey has been about making data work smarter and more impactful. 
-      I’m passionate about <strong>Large Language Models (LLMs)</strong>, <strong>Data Analytics</strong>, and <strong>AI solutions</strong> 
-      that go beyond numbers—tools that help people ask better questions, uncover deeper insights, and drive informed decision-making.
+      I’m a <strong>Software Engineer</strong> with an <strong>M.S. in Information Technology</strong> from the University of Wisconsin–Milwaukee,
+      specializing in <strong>GPU-accelerated machine learning inference</strong> and <strong>high-performance ML systems</strong>.
+      My work focuses on reducing latency and improving throughput for transformer-based workloads through CUDA kernel optimization,
+      profiling-driven tuning, and optimized inference pipelines.
     </p>
     <p>
-      I’ve developed projects such as a <strong>NYC Property Price Predictor</strong> using PySpark, XGBoost, and SHAP, and a 
-      <strong>Streamlit app for LLMs in Business Intelligence</strong> powered by Hugging Face transformers, gaining hands-on experience with 
-      predictive modeling, natural language query generation, and interactive analytics. Along the way, I’ve worked with models and algorithms 
-      including <strong>Linear Regression, Random Forest, XGBoost, and Decision Trees</strong> to solve business and analytical challenges.
+      I build and optimize <strong>CUDA kernels</strong> using warp-level primitives, shared memory, and tensor cores, and profile GPU workloads with
+      <strong>Nsight Systems</strong> and <strong>Nsight Compute</strong> to identify memory, occupancy, and execution bottlenecks.
+      I integrate optimized workflows into <strong>PyTorch</strong> and <strong>TensorRT</strong>, applying techniques like
+      <strong>mixed precision (FP16/BF16)</strong>, <strong>kernel fusion</strong>, and <strong>CUDA Graphs</strong> for more consistent real-time inference.
     </p>
     <p>
-      I’m continuing to expand my expertise in <strong>LLMs, NLP, and AI model deployment</strong>, while exploring emerging areas such as 
-      <strong>Retrieval-Augmented Generation (RAG), embeddings, and multimodal AI</strong>. My focus is on bridging advanced AI techniques 
-      with real-world applications to create solutions that are both powerful and practical.
+      I’m actively working on <strong>H100/A100 tuning</strong>, <strong>multi-GPU inference</strong>, and <strong>memory-efficient deployment</strong>
+      for large models, and I enjoy collaborating across teams to ship reliable, production-ready systems.
     </p>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Research Assistant – University of Wisconsin–Milwaukee</h3>
+        <p><strong>Milwaukee, USA</strong> | Jan 2024 – Present</p>
+        <ul>
+          <li>Developed and optimized GPU-accelerated ML inference pipelines using <strong>CUDA</strong> and <strong>PyTorch</strong>.</li>
+          <li>Designed high-performance CUDA kernels leveraging <strong>warp-level primitives</strong>, <strong>shared memory</strong>, and <strong>tensor cores</strong> on NVIDIA GPUs.</li>
+          <li>Profiled GPU workloads with <strong>Nsight Systems</strong> and <strong>Nsight Compute</strong> to identify bottlenecks in memory throughput, occupancy, and execution.</li>
+          <li>Applied <strong>mixed-precision (FP16/BF16)</strong> optimization using Tensor Cores to improve latency and throughput under high batch-load inference.</li>
+          <li>Integrated optimized kernels into <strong>PyTorch</strong> inference flows and benchmarked performance with <strong>TensorRT</strong> for transformer workloads.</li>
+          <li>Implemented <strong>kernel fusion</strong> and <strong>CUDA Graph capture</strong> to reduce kernel launch overhead and improve inference consistency across dynamic shapes.</li>
+          <li>Optimized transformer attention/MLP paths and supported <strong>multi-GPU inference</strong> and memory-efficient deployment for long-context scenarios.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Software Engineer – Technotharanga</h3>
+        <p><strong>India</strong> | Oct 2022 – Dec 2023</p>
+        <ul>
+          <li>Developed and maintained software applications with a focus on reliability, performance, and clean implementation.</li>
+          <li>Collaborated with cross-functional teams to deliver production-ready features and improve user experience.</li>
+          <li>Participated in debugging, performance tuning, and documentation to support stable releases and long-term maintainability.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
+
       <div class="card">
-        <h3>NYC Property Price Predictor</h3>
+        <h3>Hybrid JIT–CUDA Graph Runtime for LLM Inference</h3>
         <p>
-          End-to-end ML pipeline in Databricks with PySpark, XGBoost & SHAP. 
-          Deployed as an interactive Streamlit app.
+          Designed a hybrid runtime combining static <strong>CUDA Graph replay</strong> with <strong>JIT-compiled dynamic kernels</strong>
+          to enable low-latency, deterministic autoregressive inference.
         </p>
-        <a href="https://github.com/SagarTechTrends/NYC-Resedintial-property-sales-predictor-by-sagar" target="_blank">View on GitHub</a> | 
-        <a href="https://nyc-resedintial-property-sales-predictor-by-sagar.streamlit.app/" target="_blank">Try the App</a>
+        <ul>
+          <li>Reduced Python-side kernel dispatch by executing transformer blocks within CUDA Graphs while handling dynamic KV-cache growth.</li>
+          <li>Implemented persistent memory preallocation and graph-safe KV-cache indexing to maintain pointer stability under dynamic sequences.</li>
+          <li>Benchmarked against PyTorch Eager and TensorRT-LLM, achieving significant improvements in TTFT and tail latency on NVIDIA GPUs.</li>
+        </ul>
       </div>
 
       <div class="card">
-        <h3>LLMs in Business Intelligence</h3>
+        <h3>GPU Performance Optimization</h3>
         <p>
-          Streamlit app powered by Hugging Face transformers that explores natural language BI queries 
-          and interactive analytics for business insights.
+          Designed and benchmarked custom CUDA kernels to enhance deep learning pipeline performance using profiling-driven optimization.
         </p>
-        <a href="https://github.com/SagarTechTrends/LLM-s-in-Business-Intelligence" target="_blank">View on GitHub</a> | 
-        <a href="https://llm-s-in-business-intelligence-cnnxvphi34ugctdljvlnyh.streamlit.app/" target="_blank">Try the App</a>
+        <ul>
+          <li>Applied warp-level parallelism to maximize SM utilization and reduce idle threads.</li>
+          <li>Implemented mixed-precision (FP16/BF16) to accelerate inference and reduce memory footprint.</li>
+          <li>Improved memory access patterns with coalescing to reduce global memory latency.</li>
+        </ul>
       </div>
 
       <div class="card">
-        <h3>Web Development Projects</h3>
+        <h3>TensorRT Inference Optimization (FP16)</h3>
         <p>
-          Responsive web apps built with HTML, CSS, JavaScript & React, 
-          focusing on accessibility, performance, and user engagement.
+          Converted ResNet models to TensorRT and applied FP16 optimizations using Tensor Cores for faster inference.
         </p>
-        <a href="https://github.com/SagarTechTrends" target="_blank">See More on GitHub</a>
+        <ul>
+          <li>Reduced batch inference latency through kernel fusion and optimized memory transfers.</li>
+          <li>Validated accuracy stayed within acceptable range post-optimization.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>2nd Place – QBI 2025 Hackathon (UCSF)</h3>
+        <p>
+          Built <strong>DECODE</strong>, a transformer-based tool for predicting drug–protein binding efficacy in collaboration with researchers
+          from UC Berkeley and UCSF.
+        </p>
+        <ul>
+          <li>Used Meta’s ESM and a Molecular Transformer to achieve strong performance on BindingDB.</li>
+          <li>Developed a GUI for large-scale drug repurposing workflows.</li>
+        </ul>
+        <p><em>Feb 2025</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Core</h3>
+        <p>CUDA • C++ • Python • PyTorch • TensorRT • Nsight Systems/Compute • Mixed Precision (FP16/BF16) • Kernel Fusion • CUDA Graphs</p>
+      </div>
+      <div class="card">
+        <h3>Systems & ML</h3>
+        <p>Multi-GPU Inference • cuBLAS • NCCL • Performance Profiling • Memory Optimization • Transformer Inference</p>
+      </div>
+      <div class="card">
+        <h3>Foundations</h3>
+        <p>Data Structures • Operating Systems • Databases/DBMS • Computer Networks • NLP • Algorithms</p>
       </div>
     </div>
   </section>
@@ -87,14 +162,15 @@
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:sagarmbabu19@gmail.com">sagarmbabu19@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sagarmbabu/" target="_blank">linkedin.com/in/sagarmbabu</a></p>
-    <p>GitHub: <a href="https://github.com/sagarmbabu" target="_blank">github.com/SagarTechTrends</a></p>
+    <p>Email: <a href="mailto:muruges3@uwm.edu">muruges3@uwm.edu</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sagarmbabu/" target="_blank" rel="noopener">linkedin.com/in/sagarmbabu</a></p>
+    <p>GitHub: <a href="https://github.com/sagarmbabu" target="_blank" rel="noopener">github.com/sagarmbabu</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Sagar Murugesh Babu | Built with GitHub Pages</p>
   </footer>
+
 </body>
 </html>
